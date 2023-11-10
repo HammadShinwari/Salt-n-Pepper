@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+/* ============================= Navbar =========================== */
+
+header{
+    background: #000;
+    box-shadow: 0 10px 10px -10px rgba(0,0,0,0.1);    
+}
+#menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 15px;
+    position: relative;
+}
+.about-logo a{
+    text-decoration: none;
+    max-width: 150px;
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+    color: #ee1909;
+}
+#menu ul li{
+    display: inline-block;
+}
+#menu ul li a{
+    display: inline-block;
+    font-family: 'Rsleway', sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 13px 0;
+    position: relative;
+    transition: 0.4s ease;
+    text-decoration: none;
+}
+#menu ul li:not(:last-child) a{
+    margin-right: 18px;
+}
+#menu ul li:hover a{
+    color: red;
+}
+#menu input,#menu label{
+    display: none;
+}
+@media only screen and (min-width: 320px){
+    #menu ul li:last-child a{
+        color: #fff;
+        padding-left: 24px;
+        padding-right: 24px;
+        border-radius: 30px;
+        background-image: linear-gradient(270deg, red 0%, #ee1909 100%);
+        box-shadow: 6px 6px 25px 0 rgba(214, 148, 37, 0.28);
+    }
+    #menu ul li:last-child a:hover{
+        color: #000;
+
+    }
+}
+
+@media only screen and (max-width: 767px){
+    #menu label{
+        display: block;
+    }
+    #menu label::before{
+        content: "\2261";
+        font-size: 44px;
+    }
+    #menu ul{
+        position: absolute;
+        top: 100%;
+        background: #000;
+        right: 0;
+        left: 0;
+        z-index: 3;
+        height: calc(100vh - 58px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0);
+        transition: 0.6s ease;
+    }
+    #menu input:checked + label::before{
+        content: "\00d7";
+    }
+    #menu input:checked ~ ul{
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+}
+
+/* ======================= intro ======================= */
+
+.intro{
+    background: rgb(20, 20, 20);
+    text-align: center;
+}
+.intro-h2{
+    text-align: center;
+    font-size: 40px;
+    padding-top: 3vw;
+}
+.intro-p{
+    text-align: center;
+    padding: 0 5vw;
+    padding-top: 1.8vw;
+    font-size: 20px;
+    color: rgb(189, 172, 172);
+}
+
+/* ======================= restaurant ======================= */
+
+.restaurant{
+    background: #000;
+}
+.restaurant-image-1{
+    text-align: center;
+    padding-top: 3vw;
+    display: flex;
+}
+.rest-1-p{
+    text-align: center;
+    padding: 0 5vw;
+    padding-top: 1.5vw;
+    font-size: 20px;
+    color: rgb(189, 172, 172);
+}
+.rest-span-1{
+    font-size: 40px;
+    font-weight: 800;
+    color: rgb(216, 13, 13);
+}
+
+/* ======================= footer ======================= */ /*ye ghalat h */
+
+footer{
+    padding-top: 2vw;
+    background: rgb(20, 20, 20);
+}
+.footer-img{
+    text-align: center;
+}
+.footer-p{
+    text-align: center;
+    color: #afa5a5;
+    font-size: 20px;
+}
+.footer-h2{
+    color: #afa5a5;
+    font-weight: 700;
+    text-align: center;
+}
+.social{  
+    text-align: center;
+    cursor: pointer;
+}
+.social-link{
+    padding-top: 1.5vh;
+    color: inherit;
+    font-size: 24px;
+    width: 30px;
+    height: 30px;
+    line-height: 38px;
+    display: inline-block;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+.social-link:hover{
+    color: #ee1909;
+}
+
+/* ===================== bottom ========================= */
+
+.bottom{
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vh;
+    background: #000;
+}
+.bottom-p{
+    text-align: center;
+    color: rgb(92, 86, 86);
+}
+.bottom-span{
+    color: #ee1909;
+    font-size: 20px;
+    font-weight: 700;
+}
